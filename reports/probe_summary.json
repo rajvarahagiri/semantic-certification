@@ -1,0 +1,20 @@
+{
+  "mock_run": false,
+  "articles": 431,
+  "total_revision_rows": 1322,
+  "lead_changing_revisions": 105,
+  "lead_change_rate": 0.11784511784511785,
+  "anchor_positive_base_rate": 0.642691415313225,
+  "all_evaluated_positive_rate": 0.6604477611940298,
+  "label_flip_rate_given_lead_change": 0.10476190476190476,
+  "noise_floor_n": 200,
+  "noise_floor_disagreement_rate": 0.0,
+  "never_recompute_event_weighted_stale_rate": 0.08571428571428572,
+  "epsilon": 0.005,
+  "probe_go": true,
+  "go_checks": {
+    "base_rate_in_range": true,
+    "flip_rate_sufficient": true,
+    "noise_floor_at_or_below_epsilon": true
+  }
+}

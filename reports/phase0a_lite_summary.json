@@ -1,0 +1,22 @@
+{
+  "phase": "Phase 0A-lite",
+  "formal_phase0a": false,
+  "note": "Diagnostic reuse of the 500-article probe. No new model inference performed.",
+  "epsilon": 0.005,
+  "evaluated_articles": 431,
+  "lead_change_states": 105,
+  "global_final_state_stale_rate": 0.01160092807424594,
+  "global_stale_articles": 5,
+  "pageview_covered_articles": 430,
+  "excluded_articles": 69,
+  "gate_a_point_pass": true,
+  "gate_a_strict_pass": true,
+  "gate_a_point_populations": [
+    "read_tail_20pct_demand",
+    "churn_2plus"
+  ],
+  "gate_a_strict_populations": [
+    "read_tail_20pct_demand",
+    "churn_2plus"
+  ]
+}

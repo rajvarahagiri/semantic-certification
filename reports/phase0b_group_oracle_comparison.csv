@@ -1,0 +1,3 @@
+policy,protected_threshold,general_threshold,eval_savings,max_global,max_weighted,max_protected
+global,2.0,2.0,1.0,0.01160092807424594,0.002073397359987929,0.07692307692307693
+group_aware,2.0,2.0,1.0,0.01160092807424594,0.002073397359987929,0.07692307692307693

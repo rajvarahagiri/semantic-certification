@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+artifacts/*
+!artifacts/.gitkeep
+reports/*
+!reports/.gitkeep
+
+# Model caches / credentials
+.cache/
+.env
+
+# Python packaging metadata
+*.egg-info/

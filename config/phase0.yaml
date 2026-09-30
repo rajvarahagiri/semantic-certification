@@ -1,0 +1,52 @@
+experiment:
+  name: semantic-certification-controller-phase0
+  preregistration_date: "2026-09-28"
+  epsilon: 0.005
+  primary_audit_budget_fraction: 0.05
+  probe_articles: 500
+  target_articles: 20000
+  tune_start: "2026-08-03T00:00:00Z"
+  tune_end: "2026-08-16T23:59:59Z"
+  eval_start: "2026-08-17T00:00:00Z"
+  eval_end: "2026-08-30T23:59:59Z"
+  full_start: "2026-08-03T00:00:00Z"
+  full_end: "2026-08-30T23:59:59Z"
+  base_rate_min: 0.20
+  base_rate_max: 0.70
+  min_flip_rate_given_lead_change: 0.02
+  primary_read_demand_share: 0.15
+  heterogeneity_multiple: 2.0
+
+wikimedia:
+  project: "en.wikipedia.org"
+  api_url: "https://en.wikipedia.org/w/api.php"
+  analytics_url: "https://wikimedia.org/api/rest_v1"
+  root_category: "Category:Companies"
+  category_depth: 2
+  namespace: 0
+  request_timeout_seconds: 30
+  pause_seconds: 0.1
+  user_agent: "SemanticCertificationResearch/0.1 (contact: rajkumar_varahagiri@gmail.com)"
+
+extraction:
+  pipeline_version: "lead-v1"
+  preserve_ref_marker: "[REF]"
+  preserve_citation_needed_marker: "[CITATION_NEEDED]"
+  max_chars: 24000
+
+models:
+  full_model:
+    repo_id: "Qwen/Qwen3-8B"
+    max_new_tokens: 4
+    device: "auto"
+    dtype: "auto"
+  gate_model:
+    repo_id: "BAAI/bge-small-en-v1.5"
+    device: "auto"
+
+probe:
+  noise_floor_examples: 200
+  seed: 20260928
+  include_bots_primary: false
+  include_bots_sensitivity: true
+  remove_short_revert_pairs_sensitivity: true

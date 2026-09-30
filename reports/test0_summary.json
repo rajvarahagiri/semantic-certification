@@ -1,0 +1,8 @@
+{
+  "articles": 431,
+  "final_state_stale_rate": 0.01160092807424594,
+  "pageview_weighted_final_state_stale_rate": 0.001772690841542832,
+  "lead_change_event_weighted_stale_rate": 0.08571428571428572,
+  "lead_change_states": 105,
+  "interpretation": "Diagnostic Test 0 only. Phase 0A is required for statistically valid current-state population certification."
+}

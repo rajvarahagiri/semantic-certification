@@ -1,0 +1,38 @@
+{
+  "formal_statistical_certification": false,
+  "oracle_evaluation": true,
+  "epsilon": 0.005,
+  "tune_events": 54,
+  "eval_events": 51,
+  "protected_rule": ">=2 lead-changing events during tuning window",
+  "protected_articles": 13,
+  "protected_tune_read_share": 0.7787836519486008,
+  "protected_eval_read_share": 0.6966017151509768,
+  "global_policy": {
+    "threshold": 2.0,
+    "events": 51,
+    "recomputes": 0,
+    "skips": 51,
+    "savings": 1.0,
+    "max_global": 0.01160092807424594,
+    "max_weighted": 0.002073397359987929,
+    "max_protected": 0.07692307692307693,
+    "final_global": 0.01160092807424594,
+    "final_weighted": 0.002073397359987929,
+    "final_protected": 0.07692307692307693
+  },
+  "group_policy": {
+    "protected_threshold": 2.0,
+    "general_threshold": 2.0,
+    "events": 51,
+    "recomputes": 0,
+    "skips": 51,
+    "savings": 1.0,
+    "max_global": 0.01160092807424594,
+    "max_weighted": 0.002073397359987929,
+    "max_protected": 0.07692307692307693,
+    "final_global": 0.01160092807424594,
+    "final_weighted": 0.002073397359987929,
+    "final_protected": 0.07692307692307693
+  }
+}

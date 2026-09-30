@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semantic-certification-controller"
+version = "0.1.0"
+description = "Phase 0 probe for workload-aware semantic certification research"
+requires-python = ">=3.11"
+dependencies = [
+  "requests>=2.31",
+  "PyYAML>=6.0",
+  "typer>=0.12",
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "huggingface-hub>=0.27",
+]
+
+[project.optional-dependencies]
+models = [
+  "torch>=2.2",
+  "transformers>=4.51.0",
+  "sentence-transformers>=3.0",
+  "accelerate>=0.34",
+]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+semcert = "semcert.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"
