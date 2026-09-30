@@ -1,0 +1,333 @@
+{
+  "preregistration": "Phase 0 v2-A",
+  "seeds": 100,
+  "customers": 100,
+  "total_orders": 100000000,
+  "top10_impact_share": 0.7,
+  "changes_per_day": 20,
+  "recomputes_per_day": 1,
+  "compute_fraction": 0.05,
+  "policies": {
+    "random": {
+      "mean": 0.09857893183753655,
+      "median": 0.07280034120747607,
+      "q25": 0.046608521880504,
+      "q75": 0.127920200716447,
+      "mean_of_seed_max": 0.20270260578964006,
+      "median_seed_max": 0.15782933658492526,
+      "overall_max": 0.5213173463397011,
+      "mean_unweighted_stale": 0.08812178571428574,
+      "median_unweighted_stale": 0.08864285714285713,
+      "recomputes_per_seed": 28
+    },
+    "probability_only": {
+      "mean": 0.0930912544273908,
+      "median": 0.06318335002677403,
+      "q25": 0.0368853870297611,
+      "q75": 0.12840396755504804,
+      "mean_of_seed_max": 0.18840352707401886,
+      "median_seed_max": 0.14537212663144106,
+      "overall_max": 0.5279840130063677,
+      "mean_unweighted_stale": 0.07847696428571427,
+      "median_unweighted_stale": 0.07650892857142857,
+      "recomputes_per_seed": 28
+    },
+    "impact_only": {
+      "mean": 0.04751351342894562,
+      "median": 0.04188019956322863,
+      "q25": 0.03416789911839278,
+      "q75": 0.052360933760104776,
+      "mean_of_seed_max": 0.10442249920968254,
+      "median_seed_max": 0.09316533441719732,
+      "overall_max": 0.3886980083999459,
+      "mean_unweighted_stale": 0.09211482142857141,
+      "median_unweighted_stale": 0.08908928571428572,
+      "recomputes_per_seed": 28
+    },
+    "joint_known": {
+      "mean": 0.04251990783930427,
+      "median": 0.037828681750440324,
+      "q25": 0.029665363247656465,
+      "q75": 0.05415168107786401,
+      "mean_of_seed_max": 0.09079668518267626,
+      "median_seed_max": 0.08356026735311385,
+      "overall_max": 0.25232533983651717,
+      "mean_unweighted_stale": 0.08766392857142856,
+      "median_unweighted_stale": 0.08409821428571429,
+      "recomputes_per_seed": 28
+    },
+    "joint_learned": {
+      "mean": 0.04273467966335701,
+      "median": 0.03855401134508811,
+      "q25": 0.030734797477113055,
+      "q75": 0.05398627266920858,
+      "mean_of_seed_max": 0.09256103057399631,
+      "median_seed_max": 0.08402045793252948,
+      "overall_max": 0.25232533983651717,
+      "mean_unweighted_stale": 0.08754071428571425,
+      "median_unweighted_stale": 0.08609821428571429,
+      "recomputes_per_seed": 28
+    },
+    "recompute_all": {
+      "mean": 0.0,
+      "median": 0.0,
+      "q25": 0.0,
+      "q75": 0.0,
+      "mean_of_seed_max": 0.0,
+      "median_seed_max": 0.0,
+      "overall_max": 0.0,
+      "mean_unweighted_stale": 0.0,
+      "median_unweighted_stale": 0.0,
+      "recomputes_per_seed": 560
+    },
+    "never_recompute": {
+      "mean": 0.11095977540467482,
+      "median": 0.08928126149186133,
+      "q25": 0.05241158504622551,
+      "q75": 0.14340962316372152,
+      "mean_of_seed_max": 0.21732012825723704,
+      "median_seed_max": 0.16982793659395742,
+      "overall_max": 0.531275346610667,
+      "mean_unweighted_stale": 0.09961874999999998,
+      "median_unweighted_stale": 0.0984910714285714,
+      "recomputes_per_seed": 0
+    }
+  },
+  "best_simple": {
+    "policy": "impact_only",
+    "median_impact_stale": 0.04188019956322863
+  },
+  "h1_v2": {
+    "joint_known_median": 0.037828681750440324,
+    "relative_improvement_vs_best_simple": 0.09674065202749399,
+    "required_improvement": 0.15,
+    "pass": false
+  },
+  "h2_v2": {
+    "joint_learned_median": 0.03855401134508811,
+    "known_impact_benefit": 0.004051517812788306,
+    "learned_impact_benefit": 0.0033261882181405203,
+    "recovery_fraction": 0.8209733664854345,
+    "required_recovery": 0.7,
+    "pass": false
+  },
+  "small_change_large_impact_examples": {
+    "random": {
+      "policy": "random",
+      "seed": 17,
+      "day": 17,
+      "event_checkpoint": 347,
+      "stale_customers": 10,
+      "customer_stale_pct": 0.1,
+      "impact_stale_pct": 0.3851546764214425,
+      "top_stale_customers": [
+        {
+          "customer_rank": 1,
+          "impact_share": 0.23899200650318386,
+          "order_exposure": 23899200.650318388
+        },
+        {
+          "customer_rank": 2,
+          "impact_share": 0.11949600325159193,
+          "order_exposure": 11949600.325159194
+        },
+        {
+          "customer_rank": 23,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        },
+        {
+          "customer_rank": 50,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        },
+        {
+          "customer_rank": 53,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        }
+      ]
+    },
+    "probability_only": {
+      "policy": "probability_only",
+      "seed": 47,
+      "day": 20,
+      "event_checkpoint": 415,
+      "stale_customers": 10,
+      "customer_stale_pct": 0.1,
+      "impact_stale_pct": 0.4481940116515378,
+      "top_stale_customers": [
+        {
+          "customer_rank": 1,
+          "impact_share": 0.23899200650318386,
+          "order_exposure": 23899200.650318388
+        },
+        {
+          "customer_rank": 2,
+          "impact_share": 0.11949600325159193,
+          "order_exposure": 11949600.325159194
+        },
+        {
+          "customer_rank": 6,
+          "impact_share": 0.03983200108386397,
+          "order_exposure": 3983200.108386397
+        },
+        {
+          "customer_rank": 8,
+          "impact_share": 0.029874000812897983,
+          "order_exposure": 2987400.0812897985
+        },
+        {
+          "customer_rank": 11,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        }
+      ]
+    },
+    "impact_only": {
+      "policy": "impact_only",
+      "seed": 57,
+      "day": 11,
+      "event_checkpoint": 231,
+      "stale_customers": 8,
+      "customer_stale_pct": 0.08,
+      "impact_stale_pct": 0.2623253398365172,
+      "top_stale_customers": [
+        {
+          "customer_rank": 1,
+          "impact_share": 0.23899200650318386,
+          "order_exposure": 23899200.650318388
+        },
+        {
+          "customer_rank": 11,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        },
+        {
+          "customer_rank": 35,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        },
+        {
+          "customer_rank": 43,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        },
+        {
+          "customer_rank": 56,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        }
+      ]
+    },
+    "joint_known": {
+      "policy": "joint_known",
+      "seed": 36,
+      "day": 5,
+      "event_checkpoint": 107,
+      "stale_customers": 5,
+      "customer_stale_pct": 0.05,
+      "impact_stale_pct": 0.25232533983651717,
+      "top_stale_customers": [
+        {
+          "customer_rank": 1,
+          "impact_share": 0.23899200650318386,
+          "order_exposure": 23899200.650318388
+        },
+        {
+          "customer_rank": 15,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        },
+        {
+          "customer_rank": 21,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        },
+        {
+          "customer_rank": 24,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        },
+        {
+          "customer_rank": 80,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        }
+      ]
+    },
+    "joint_learned": {
+      "policy": "joint_learned",
+      "seed": 36,
+      "day": 5,
+      "event_checkpoint": 107,
+      "stale_customers": 5,
+      "customer_stale_pct": 0.05,
+      "impact_stale_pct": 0.25232533983651717,
+      "top_stale_customers": [
+        {
+          "customer_rank": 1,
+          "impact_share": 0.23899200650318386,
+          "order_exposure": 23899200.650318388
+        },
+        {
+          "customer_rank": 15,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        },
+        {
+          "customer_rank": 21,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        },
+        {
+          "customer_rank": 24,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        },
+        {
+          "customer_rank": 80,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        }
+      ]
+    },
+    "recompute_all": null,
+    "never_recompute": {
+      "policy": "never_recompute",
+      "seed": 17,
+      "day": 17,
+      "event_checkpoint": 347,
+      "stale_customers": 10,
+      "customer_stale_pct": 0.1,
+      "impact_stale_pct": 0.3851546764214425,
+      "top_stale_customers": [
+        {
+          "customer_rank": 1,
+          "impact_share": 0.23899200650318386,
+          "order_exposure": 23899200.650318388
+        },
+        {
+          "customer_rank": 2,
+          "impact_share": 0.11949600325159193,
+          "order_exposure": 11949600.325159194
+        },
+        {
+          "customer_rank": 23,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        },
+        {
+          "customer_rank": 50,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        },
+        {
+          "customer_rank": 53,
+          "impact_share": 0.003333333333333334,
+          "order_exposure": 333333.3333333334
+        }
+      ]
+    }
+  }
+}
